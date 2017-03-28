@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\ChargerAI.cs" />
      <Compile Include="Assets\Scripts\Controller2D.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\ParallaxBackground.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\RaycastController.cs" />
      <Compile Include="Assets\Scripts\RaycastTest.cs" />

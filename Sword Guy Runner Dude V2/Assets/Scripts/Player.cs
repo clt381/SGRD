@@ -20,7 +20,7 @@ public class Player : MonoBehaviour {
     Vector3 velocity;
     float velocityXSmoothing;
 
-    private float autoMoveSpeed = 2f;    //automatic move right speed
+    public float autoMoveSpeed = 2f;    //automatic move right speed
 
     //to store attack information
     public GameObject attackTest;
@@ -38,12 +38,18 @@ public class Player : MonoBehaviour {
     public Transform pitfallPoint;
     private float pitfallDepth = -20f;
 
+    //to store animator information
+    public GameObject upperSpriteAnimator;
+    public GameObject lowerSpriteAnimator;
+
     Controller2D controller;
     RaycastController raycastController;
 
     void Start () {
         controller = GetComponent<Controller2D>();
         raycastController = GetComponent<RaycastController>();
+        upperSpriteAnimator = GameObject.Find("UpperSprite");
+        lowerSpriteAnimator = GameObject.Find("LowerSprite");
 
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpApex, 2);     //more intuitive equation that allows 'jumpheight' and 'timetojumpapex' variables to be manipulated
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
@@ -51,18 +57,12 @@ public class Player : MonoBehaviour {
     }
 
 
-    void FixedUpdate() {                //fixedupdate stops the boss' jittery movement BUT makes attackEnemy less responsive FIXED with additional update
+    void FixedUpdate() {
 
         //Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")      //if I want to regain control of player, paste this back into above Vector2 input
         //autoMoveSpeed, 0f                                                 //if I want the player to move right automatically, paste this back into above Vector2 input
         //Vector2 input2 = new Vector2(autoMoveSpeed2, 0f);
-
-        //float targetVelocityX = input2.x * moveSpeed;
-        //velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below ? accelerationTimeGrounded : accelerationTimeAirborne));    //smoother turning on x axis
-        //velocity.y += gravity * Time.deltaTime;
-        //controller.Move(velocity * Time.deltaTime);
-
-
+        
     }
 
     void Update()           //put all inputs into update
@@ -88,11 +88,13 @@ public class Player : MonoBehaviour {
         if (controller.collisions.above || controller.collisions.below)
         {
             velocity.y = 0;             //so that the raycast does not continually accumulate length when player is stationary/colliding with the ground
+            lowerSpriteAnimator.GetComponent<Animator>().SetBool("Jump", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && controller.collisions.below)
         {
             velocity.y = jumpVelocity;  //can jump only if space is pressed and player is colliding with the ground
+            lowerSpriteAnimator.GetComponent<Animator>().SetBool("Jump", true);
         }
     }
 
@@ -121,11 +123,12 @@ public class Player : MonoBehaviour {
                    
                 }
                 attackTimer = 0.00001f;                //not sure if I want the player to even have a cooldown time (button mashing may be more fun)
-
+                upperSpriteAnimator.GetComponent<Animator>().SetTrigger("Attack");
             }
             else
             {
                 attackTest.SetActive(false);
+                upperSpriteAnimator.GetComponent<Animator>().ResetTrigger("Attack");
             }
         }
 

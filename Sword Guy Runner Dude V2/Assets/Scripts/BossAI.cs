@@ -11,7 +11,7 @@ public class BossAI : MonoBehaviour {
 
     private float moveSpeed = 11f;
     private float minRangeMoveSpeed = 12f;
-    private float bossHealth = 50f;
+    private float bossHealth = 200f;
     public float distanceFromPlayer;
     public float maxRange = 20f;
     public float minRange = 3f;         //should be the same as the player's attack radius
