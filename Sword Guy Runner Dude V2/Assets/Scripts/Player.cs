@@ -110,6 +110,7 @@ public class Player : MonoBehaviour {
                 attackTest.SetActive(true);         //sets to true for as long as attackcooldowntime lasts    
                 attackTest.transform.localScale = new Vector3(attackRadius, attackRadius, 0);   //sets scale of attacktest object to attackradius
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(transform.position, attackRadius, raycastController.collisionMaskEnemy);        //returns array of all detected colliders
+                Collider2D[] enemyProjectiles = Physics2D.OverlapCircleAll(transform.position, attackRadius, raycastController.collisionMaskEnemyProjectile);
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     if (enemies[i].gameObject.tag == "Boss")            //if enemy in list has tag "Boss"
@@ -118,10 +119,17 @@ public class Player : MonoBehaviour {
                     }
                     else
                     {
-                        Destroy(enemies[i].gameObject);
+                        //Destroy(enemies[i].gameObject);
+                        enemies[i].gameObject.GetComponent<ChargerAI>().KillEnemy();
+                        Destroy(GameObject.Find("projectileClone"));
                     }
-                   
                 }
+
+                for (int i = 0; i < enemyProjectiles.Length; i++)
+                {
+                    Destroy(enemyProjectiles[i].gameObject);
+                }
+
                 attackTimer = 0.00001f;                //not sure if I want the player to even have a cooldown time (button mashing may be more fun)
                 upperSpriteAnimator.GetComponent<Animator>().SetTrigger("Attack");
             }
@@ -163,7 +171,7 @@ public class Player : MonoBehaviour {
         }
         if (playerHealth <= 0)
         {
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
         }
     }
 

@@ -42,7 +42,7 @@ public class ShooterAI : MonoBehaviour {
                     //print("playerWithinRange");         //MOFOKING WORKS BABY
                     GameObject projectileClone;
                     projectileClone = Instantiate(projectile, shootingPoint.transform.position, shootingPoint.transform.rotation) as GameObject;        //instantiates the projectile at shooting point gameobject
-                    projectileClone.GetComponent<Rigidbody2D>().velocity = projectileDirection * projectileSpeed;               
+                    projectileClone.GetComponent<Rigidbody2D>().velocity = projectileDirection * projectileSpeed;        
 
                     projectileTimer = 0;        //resets timer so shooter can't spam 
                 

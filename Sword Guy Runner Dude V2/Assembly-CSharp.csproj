@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Scripts\ShooterAI.cs" />
      <Compile Include="Assets\Scripts\UnitTest.cs" />
+     <Compile Include="Assets\Scripts\ZoomTrigger.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

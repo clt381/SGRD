@@ -1,0 +1,230 @@
+fileFormatVersion: 2
+guid: 127680f8c6ad08a459b9cbf4de099dfa
+timeCreated: 1490499699
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: RunningSpriteSheet_0
+    21300002: RunningSpriteSheet_1
+    21300004: RunningSpriteSheet_2
+    21300006: RunningSpriteSheet_3
+    21300008: RunningSpriteSheet_4
+    21300010: RunningSpriteSheet_5
+    21300012: RunningSpriteSheet_6
+    21300014: RunningSpriteSheet_7
+    21300016: RunningSpriteSheet_8
+    21300018: RunningSpriteSheet_9
+    21300020: RunningSpriteSheet_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 4096
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RunningSpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1652
+        width: 294
+        height: 310
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.5202782}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 1650
+        width: 398
+        height: 315
+      alignment: 9
+      pivot: {x: 0.50789744, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1650
+        width: 505
+        height: 311
+      alignment: 9
+      pivot: {x: 0.41286272, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1378
+        width: 607
+        height: 200
+      alignment: 9
+      pivot: {x: 0.42232674, y: 0.2328302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1308
+        width: 575
+        height: 264
+      alignment: 9
+      pivot: {x: 0.40707138, y: 0.3690343}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 952
+        width: 482
+        height: 313
+      alignment: 9
+      pivot: {x: 0.36957774, y: 0.4999996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 951
+        width: 268
+        height: 314
+      alignment: 9
+      pivot: {x: 0.3944454, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 949
+        width: 390
+        height: 324
+      alignment: 9
+      pivot: {x: 0.5, y: 0.50970083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 550
+        width: 483
+        height: 321
+      alignment: 9
+      pivot: {x: 0.506507, y: 0.50979185}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 629
+        width: 651
+        height: 239
+      alignment: 9
+      pivot: {x: 0.42274854, y: 0.3027298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: RunningSpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 104
+        width: 557
+        height: 335
+      alignment: 9
+      pivot: {x: 0.40406823, y: 0.40617406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -7,6 +7,7 @@ public class RaycastController : MonoBehaviour {
 
     public LayerMask collisionMask;     //remember to assign to objects that the player should collide with
     public LayerMask collisionMaskEnemy;
+    public LayerMask collisionMaskEnemyProjectile;
     public LayerMask collisionMaskPitfall;
     public LayerMask collisionMaskBoss;
     public const float skinWidth = 0.015f; //cannot be changed once declared

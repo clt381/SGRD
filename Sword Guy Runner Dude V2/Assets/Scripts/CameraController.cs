@@ -5,8 +5,16 @@ using UnityEngine;
 public class CameraController : MonoBehaviour {
 
     public Player thePlayer;
+    public Transform playerPosition;
     public RaycastTest raycastTest;
     public Vector3 lastPlayerPosition;     //store position of the player
+    
+
+    public float zoomSpeed = 1.0f;
+    public float defaultCameraSize = 6.396629f;
+    public float skullTempleZoom = 10f;
+    public float platformJumpingZoom = 10f;
+    bool zooming;
 
     public float distanceToMoveX;
     public float distanceToMoveY;
@@ -21,10 +29,39 @@ public class CameraController : MonoBehaviour {
         lastPlayerPosition = thePlayer.transform.position;
     }
 
+    public void Zoom(float firstPos, float lastPos)
+    {
+        //Camera.main.orthographicSize = defaultCameraSize;
+        //if (playerPosition.position.x > platformJumpingTrigger1Start.transform.position.x && playerPosition.position.x < platformJumpingTrigger1End.transform.position.x)
+        //{
+        //    Camera.main.orthographicSize = platformJumpingZoom;
+        //}
+        if (!zooming)
+        {
+            StartCoroutine(Zooming(firstPos, lastPos));
+        }
+    }
+
+    IEnumerator Zooming(float firstPos, float lastPos)
+    {
+        zooming = true;
+        float percentage = 0.0f;
+        while (percentage < 1.0f)
+        {
+            //Debug.Log(percentage + " " + Camera.main.orthographicSize);
+            Camera.main.orthographicSize = Mathf.Lerp(firstPos, lastPos, percentage);
+            percentage += zoomSpeed * Time.deltaTime;//bigger numbers means faster zoom
+            percentage = Mathf.Clamp(percentage, 0.0f, 1.0f);
+            yield return null; 
+        }
+        zooming = false;
+    }
+
     void Update()
     {
-        Vector3 playerPosition = thePlayer.transform.TransformPoint(new Vector3(15, 3, -10));
+        Vector3 playerPosition = thePlayer.transform.TransformPoint(new Vector3(11, 1f, -10));
         transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref smoothVelocity, smoothTime);
+        //Zoom();
 
         //distanceToMoveX = thePlayer.transform.position.x - lastPlayerPosition.x;
         //distanceToMoveY = distanceToMoveY = thePlayer.transform.position.y - lastPlayerPosition.y;
