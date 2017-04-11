@@ -11,10 +11,13 @@ public class CameraController : MonoBehaviour {
     
 
     public float zoomSpeed = 1.0f;
+    public float shiftSpeed = 1.0f;
+    public Vector3 shiftOffSet = new Vector3(0,0,0);
     public float defaultCameraSize = 6.396629f;
     public float skullTempleZoom = 10f;
     public float platformJumpingZoom = 10f;
     bool zooming;
+    bool shifting;
 
     public float distanceToMoveX;
     public float distanceToMoveY;
@@ -57,10 +60,32 @@ public class CameraController : MonoBehaviour {
         zooming = false;
     }
 
+    public void Shift(Vector3 firstPos, Vector3 lastPos)
+    {
+        if (!shifting)
+        {
+            StartCoroutine(Shifting(firstPos, lastPos));
+        }
+    }
+
+    IEnumerator Shifting(Vector3 firstPos, Vector3 lastPos)
+    {
+        shifting = true;
+        float percentage = 0.0f;
+        while (percentage < 1.0f)
+        {
+            shiftOffSet = Vector3.Lerp(firstPos, lastPos, percentage);
+            percentage += shiftSpeed * Time.deltaTime;
+            percentage = Mathf.Clamp(percentage, 0.0f, 1.0f);
+            yield return null;
+        }
+        shifting = false;
+    }
+
     void Update()
     {
         Vector3 playerPosition = thePlayer.transform.TransformPoint(new Vector3(11, 1f, -10));
-        transform.position = Vector3.SmoothDamp(transform.position, playerPosition, ref smoothVelocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, playerPosition + shiftOffSet, ref smoothVelocity, smoothTime);
         //Zoom();
 
         //distanceToMoveX = thePlayer.transform.position.x - lastPlayerPosition.x;
