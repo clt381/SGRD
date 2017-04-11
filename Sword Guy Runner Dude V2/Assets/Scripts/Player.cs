@@ -115,13 +115,15 @@ public class Player : MonoBehaviour {
                 {
                     if (enemies[i].gameObject.tag == "Boss")            //if enemy in list has tag "Boss"
                     {
-                        enemies[i].gameObject.GetComponent<BossAI>().Damage(10);        //damage function
+                        //enemies[i].gameObject.GetComponent<BossAI>().Damage(10);        //damage function
+                        enemies[i].gameObject.GetComponent<SkullBossAI>().Damage(10);
                     }
                     else
                     {
                         //Destroy(enemies[i].gameObject);
                         enemies[i].gameObject.GetComponent<ChargerAI>().KillEnemy();
                         Destroy(GameObject.Find("projectileClone"));
+                        Destroy(GameObject.Find("fireBallClone"));
                     }
                 }
 

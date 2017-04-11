@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d9fc712e06ef52241ac327b1535f5908
-timeCreated: 1491072243
+timeCreated: 1491487668
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -91,12 +91,12 @@ TextureImporter:
       name: MonsterDeathSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 880
+        x: 878
         y: 384
         width: 390
-        height: 455
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 616
+      alignment: 9
+      pivot: {x: 0.50634515, y: 0.7229891}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -104,12 +104,12 @@ TextureImporter:
       name: MonsterDeathSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1517
+        x: 1515
         y: 299
         width: 275
-        height: 540
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 701
+      alignment: 9
+      pivot: {x: 0.49999866, y: 0.8547278}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -120,9 +120,9 @@ TextureImporter:
         x: 2144
         y: 170
         width: 230
-        height: 740
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 830
+      alignment: 9
+      pivot: {x: 0.61835086, y: 0.9820342}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -133,9 +133,9 @@ TextureImporter:
         x: 2611
         y: 185
         width: 202
-        height: 744
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 815
+      alignment: 9
+      pivot: {x: 0.6102549, y: 0.99238044}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

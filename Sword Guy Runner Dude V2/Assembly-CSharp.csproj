@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AudioController.cs" />
      <Compile Include="Assets\Scripts\BossAI.cs" />
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\RaycastTest.cs" />
      <Compile Include="Assets\Scripts\ScrollingBackground.cs" />
      <Compile Include="Assets\Scripts\ShooterAI.cs" />
+     <Compile Include="Assets\Scripts\SkullBossAI.cs" />
      <Compile Include="Assets\Scripts\UnitTest.cs" />
      <Compile Include="Assets\Scripts\ZoomTrigger.cs" />
  <Reference Include="UnityEngine.UI">
